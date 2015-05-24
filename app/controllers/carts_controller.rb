@@ -59,7 +59,7 @@ end
         @cart.destroy
           session[:cart_id] = nil
          respond_to do |format|
-              format.html { redirect_to(store_url}
+              format.html { redirect_to(store_url)}
               format.xml { head :ok }
           end
   end
@@ -74,7 +74,7 @@ logger.error "Attempt to access invalid cart #{params[:id]}"
 redirect_to store_url, :notice => 'Invalid cart'
 else
 
-end
+    end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
