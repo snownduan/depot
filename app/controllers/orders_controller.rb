@@ -46,6 +46,7 @@ class OrdersController < ApplicationController
   # POST /orders
   # POST /orders.xml
   def create
+     params.permit!
     @order = Order.new(params[:order])
     @order.add_line_items_from_cart(current_cart)
 
